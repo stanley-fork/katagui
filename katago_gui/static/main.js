@@ -255,7 +255,7 @@ function main(JGO, axutil) {
           if (coord == af.hover.coord)
             return
 
-          af.hover(coord, af.turn(), {force:true}) //@@@
+          af.hover(coord, af.turn(), {force:true}) 
           if (score_position.active) {
             draw_estimate(score_position.probs)
           }

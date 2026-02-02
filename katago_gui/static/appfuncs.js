@@ -194,7 +194,11 @@ export function hover(coord, col, opts) {
     var jboard = g_jrecord.jboard
     if (coord && (coord.i < 0 || coord.j < 0 || coord.i > 18 || coord.j > 18)) {
         if (hover.coord) {
-            jboard.setType(hover.coord, JGO.CLEAR)
+            if (!has_stone(hover.coord)) {
+                jboard.setType(hover.coord, JGO.CLEAR)
+            } else {
+                jboard.setMark(hover.coord, JGO.MARK.NONE)
+            }
             hover.coord = null
         }
         return
