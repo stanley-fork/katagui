@@ -194,7 +194,6 @@ def select_move_guest( bot_name):
             current_user.count_move()
     except:
         pass
-
     res = fwd_to_katago_guest( endpoint, args)
     try:
         return jsonify( res)

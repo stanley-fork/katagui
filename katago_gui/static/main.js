@@ -597,6 +597,7 @@ function main(JGO, axutil) {
 
     //------------------------------------
     function toggle_settings_window() {
+      selfplay('off')
       af.initSettingSliders()
       if ($('#div_settings').css('display') == 'grid') {
         $('#div_settings').css({ 'display': 'none' })
